@@ -5,8 +5,12 @@ on:
     branches:
       - master
       - develop
-  schedule:
-    - cron: "0 * * * *"
+  # 2026
+  # The schedule is the way to run it
+  # but does this need to be running in the cppalliance org?
+  # Disable for now
+  # schedule:
+  #   - cron: "0 * * * *"
 
 concurrency:
   group: ${{format('commit-bot-{0}:{1}', github.repository, github.ref)}}
